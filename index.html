@@ -1,123 +1,138 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-      <link href="css/style.css" rel="stylesheet" type="text/css">
-      <script src="js/scripts.js"></script>
-      <title>LIZAR SCHOOL QUIZ BOARD</title>
-   </head>
-   <body>
+
+<head>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/scripts.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>LIZAR SCHOOL QUIZ BOARD</title>
+</head>
+
+<body>
         <div id="navbar">
-            <a href="index.html" id="logo"><H1>LOGO</H1></a>
-            <div id="navbar-right">
-            <h2>LIZAR SCHOOL QUIZ </h2>    
-            </div>
+                <a href="index.html" id="logo">
+                        <H1>QUIZ</H1>
+                </a>
+                <div id="navbar-right">
+                        <h2>LIZAR SCHOOL  </h2>
+                </div>
         </div>
         <hr>
 
         <div class="title">
-        <h2 class="rainbow">LIZAR SCHOOL QUIZ</h2>
-        <h4 class="rainbow"><strong>Answer the following questions and get your results ASAP!!</strong></h4>
+                <h2 class="rainbow">LIZAR SCHOOL QUIZ</h2>
+                <h4 class="rainbow"><strong>Answer the following questions and get your results ASAP!!</strong></h4>
         </div>
 
         <div class="container">
                 <h1>Fill in the correct answer</h1>
-                <div id="blanks">
-                   <form>
-                      <div class="form-group">
-                        <div class="panel panel-info">
-                                <div class="panel-heading">
-                                  <h2 class="panel-title">What is JavaScript</h2>
-                        </div>
-                        <label class="container">A programming language used to make a webpage.
-                                <input type="checkbox" >
-                                <span class="checkmark"></span>
-                        </label>
-                        <label class="container">A programming language used to style webpages.
-                                <input type="checkbox" >
-                                <span class="checkmark"></span>
-                        </label>
-                        <label class="container">A programming language used to make webpages interactive.
-                                <input type="checkbox" >
-                                <span class="checkmark"></span>
-                        </label>
-                      </div>
-                        <div class="form-group">
-                                <div class="panel panel-info">
-                                        <div class="panel-heading">
-                                          <h2 class="panel-title">What is a variable?</h2>
+                <div id="results">
+                        <form name="formQuiz" onsubmit="return submitAnswers()">
+                                <div class="form-group">
+                                        <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                        <h2 class="panel-title">What is JavaScript</h2>
+                                                </div>
+                                        </div>
+                                        <label class="container" >A programming language used to make a webpage.
+                                                <input type="radio" name="q1" value="a" id="q1a">
+                                                <span class="checkmark"></span>
+                                        </label> 
+                                        <label class="container">
+                                                <input type="radio" name="q1" value="b" id="q1b">A programming language used to style webpages.
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">A programming language used to make webpages
+                                                interactive.
+                                                <input type="radio" name="q1" value="c" id="q1c">
+                                                <span class="checkmark"></span>
+                                        </label>
                                 </div>
-                               <label class="container">Container for storing variables
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">Programming language
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">Datatype
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                        </div>
-                        <div class="form-group">
-                                <div class="panel panel-info">
-                                        <div class="panel-heading">
-                                          <h2 class="panel-title">What is a method?</h2>
+                                <div class="form-group">
+                                        <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                        <h2 class="panel-title">What is a variable?</h2>
+                                                </div>
+                                        </div>
+                                        <label class="container">Container for storing variables
+                                                <input type="radio" name="q2" value="a" id="q2a">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Programming language
+                                                <input type="radio" name="q2" value="b" id="q2b">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Datatype
+                                                <input type="radio" name="q2" value="c" id="q2c">
+                                                <span class="checkmark"></span>
+                                        </label>
                                 </div>
-                               <label class="container">Programming language.
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">A string.
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">An action taken on something.
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                        </div>
-                        <div class="form-group">
-                                <div class="panel panel-info">
-                                        <div class="panel-heading">
-                                          <h2 class="panel-title">Which is the modulo operator?</h2>
+                                <div class="form-group">
+                                        <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                        <h2 class="panel-title">What is a method?</h2>
+                                                </div>
+                                        </div>
+                                        <label class="container">Programming language.
+                                                <input type="radio" name="q3" value="a" id="q3a">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">A string.
+                                                <input type="radio" name="q3" value="b" id="q3b">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">An action taken on something.
+                                                <input type="radio" name="q3" value="c" id="q3c">
+                                                <span class="checkmark"></span>
+                                        </label>
                                 </div>
-                               <label class="container">%
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">+
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">*
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                        </div>
-                        
-                        <div class="form-group">
-                                <div class="panel panel-info">
-                                        <div class="panel-heading">
-                                          <h2 class="panel-title">What does the % operator do?</h2>
+                                <div class="form-group">
+                                        <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                        <h2 class="panel-title">Which is the modulo operator?</h2>
+                                                </div>
+                                                </div>
+                                        <label class="container">%
+                                                <input type="radio" name="q4" value="a" id="q4a">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">+
+                                                <input type="radio" name="q4" value="b" id="q4b">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">*
+                                                <input type="radio" name="q4" value="c" id="q4c">
+                                                <span class="checkmark"></span>
+                                        </label>
                                 </div>
-                               <label class="container">Find the percentage.
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">Divide by 100.
-                                       <input type="checkbox" >
-                                       <span class="checkmark"></span>
-                               </label>
-                               <label class="container">Divide by a given number and give the remainder.
-                                       <input type="checkbox">
-                                       <span class="checkmark"></span>
-                               </label>
-                        </div>sam
-                      <button type="submit" class="btn">Submit</button>
-                </form>
+                                <div class="form-group">
+                                        <div class="panel panel-info">
+                                                <div class="panel-heading">
+                                                        <h2 class="panel-title">What does the % operator do?</h2>
+                                                </div>
+                                        </div>
+                                        <label class="container">Find the percentage.
+                                                <input type="radio" name="q5" value="a" id="q5a">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Divide by 100.
+                                                <input type="radio" name="q5" value="b" id="q5b">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                        <label class="container">Divide by a given number and give the
+                                                        remainder.
+                                                <input type="radio" name="q5" value="c" id="q5c">
+                                                <span class="checkmark"></span>
+                                        </label>
+                                </div>
+                                <div id="flip"><button type="submit" class="btn" value="submit">Submit</button>
+                                </div>
+                                <div id="panel"sam></div>
+                                
+                        </form>
                 </div>
-                </div>
-   </body>
+        </div>
+</body>
+
 </html>

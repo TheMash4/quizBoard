@@ -82,6 +82,7 @@ body{
  }
 
  .container {
+     background-color: #2C5364;
     display: block;
     position: relative;
     padding-left: 35px;
@@ -136,4 +137,16 @@ body{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+ 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
 }
